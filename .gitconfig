@@ -1,8 +1,37 @@
+[alias]
+	c = commit -am
+	up = pull
+	p = push
+	s = status -s
+	df = diff --color --color-words --abbrev
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 [user]
 	name = Derek Persons
 	email = derek.persons@gmail.com
+[color]
+	ui = always
 [core]
-	excludesfile = /Users/derek/.gitignore_global
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[merge]
+	log = true
+[url "git@github.com:"]
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
