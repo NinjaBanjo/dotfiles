@@ -5,6 +5,9 @@ for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
+# Grunt-cli auto-completion
+eval "$(grunt --completion=bash)"
+
 # init z   https://github.com/rupa/z
 . ~/code/z/z.sh
 
