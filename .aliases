@@ -122,4 +122,4 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 ##Custom additions that make my life easy
 
 #Open something in phpstorm
-alias storm="open -a "phpstorm"
+alias storm="open -a 'phpstorm'"
