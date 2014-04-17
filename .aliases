@@ -22,7 +22,6 @@ alias bunyip='node ~/code/bunyip/cli.js'
 alias spot="osascript ~/code/SpotifyControl/SpotifyControl.scpt"
 alias vlc="osascript ~/code/VLCControl/VLCControl.scpt"
 alias optim="sh ~/code/bash-scripts/compress-image.sh"
-alias vpnc="osascript ~/code/osa-scripts/collegis-vpn-connect.scpt"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
