@@ -17,4 +17,5 @@ Thumbs.db
 .idea/
 .vagrant/
 .sass-cache/
+node_modules/
 latest.*
