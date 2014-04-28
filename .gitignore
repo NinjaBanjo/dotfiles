@@ -16,4 +16,5 @@ Thumbs.db
 # Custom additions for projects
 .idea/
 .vagrant/
+.sass-cache/
 latest.*
