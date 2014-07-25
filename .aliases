@@ -8,7 +8,7 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 #fun stuff
-alias matrix='LC_ALL=C tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
+alias matrix= sh ~/code/matrix/matrix.sh
 
 # programs
 alias chrome='open -a "google chrome"'
