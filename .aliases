@@ -8,7 +8,7 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 #fun stuff
-alias matrix= sh ~/code/matrix/matrix.sh
+alias matrix="bash ~/code/matrix/matrix.sh"
 
 # programs
 alias chrome='open -a "google chrome"'
