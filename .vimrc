@@ -16,6 +16,9 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
+" line number
+set number
+
 " Plugins
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
