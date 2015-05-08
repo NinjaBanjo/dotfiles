@@ -25,6 +25,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -35,3 +37,10 @@ filetype plugin indent on    " required
 imap <C-c> <CR><Esc>O
 " nerdtree open
 map <C-n> :NERDTreeToggle<CR>
+
+" js-beautify shortcut
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
