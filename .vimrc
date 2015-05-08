@@ -19,6 +19,9 @@ set softtabstop=2
 " line number
 set number
 
+" hilight current line
+set cursorline
+
 " Plugins
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
