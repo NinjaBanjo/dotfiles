@@ -39,11 +39,15 @@ Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'tpope/vim-haml'
 Plugin 'wookiehangover/jshint.vim'
+Plugin 'moll/vim-bbye'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
+
+" Backspace fix
+set backspace=2
 
 " nerdtree open
 map <C-n> :NERDTreeToggle<CR>
@@ -54,3 +58,6 @@ autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+" Bbye
+:nnoremap <Leader>q :Bdelete<CR>
