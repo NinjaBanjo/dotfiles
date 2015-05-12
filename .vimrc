@@ -32,8 +32,8 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'scrooloose/nerdtree'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'einars/js-beautify'
+" Plugin 'maksimr/vim-jsbeautify'
+" Plugin 'einars/js-beautify'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
@@ -53,11 +53,34 @@ set backspace=2
 map <C-n> :NERDTreeToggle<CR>
 
 " js-beautify shortcut
-autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 " for html
-autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
-autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+" autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 " Bbye
 :nnoremap <Leader>q :Bdelete<CR>
+
+" jsformatter
+nnoremap <silent> <leader>e :call JSFormat()<cr>
+ 
+function! JSFormat()
+  " Preparation: save last search, and cursor position.
+  let l:win_view = winsaveview()
+  let l:last_search = getreg('/')
+  let fileWorkingDirectory = expand('%:p:h')
+  let currentWorkingDirectory = getcwd()
+  execute ':lcd' . fileWorkingDirectory
+  execute ':silent' . '%!esformatter'
+  if v:shell_error
+    undo
+    "echo "esformatter error, using builtin vim formatter"
+    " use internal formatting command
+    execute ":silent normal! gg=G<cr>"
+  endif
+  " Clean up: restore previous search history, and cursor position
+  execute ':lcd' . currentWorkingDirectory
+  call winrestview(l:win_view)
+  call setreg('/', l:last_search)
+endfunction
