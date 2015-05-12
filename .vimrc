@@ -38,17 +38,13 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'tpope/vim-haml'
+Plugin 'wookiehangover/jshint.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 
-" open NERDTree automaticall
-autocmd vimenter * NERDTree
-
-" line split
-imap <C-c> <CR><Esc>O
 " nerdtree open
 map <C-n> :NERDTreeToggle<CR>
 

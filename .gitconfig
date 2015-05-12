@@ -12,7 +12,8 @@
 	ui = always
 [core]
 	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
+        attributesfile = ~/.gitattributes
+        editor = vim
 [color "branch"]
 	current = yellow reverse
 	local = yellow
