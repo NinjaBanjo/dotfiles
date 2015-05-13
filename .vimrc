@@ -12,7 +12,8 @@ Plugin 'gmarik/Vundle.vim'
 set t_Co=256
 syntax on
 set background=dark
-" colorscheme distinguished
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme desert
 
 " indentation
 set expandtab
@@ -27,6 +28,7 @@ set number
 set cursorline
 
 " Plugins
+Plugin 'chriskempson/base16-vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -40,6 +42,9 @@ Plugin 'hail2u/vim-css3-syntax'
 Plugin 'tpope/vim-haml'
 Plugin 'wookiehangover/jshint.vim'
 Plugin 'moll/vim-bbye'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'moll/vim-node'
+Plugin 'othree/javascript-libraries-syntax.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
